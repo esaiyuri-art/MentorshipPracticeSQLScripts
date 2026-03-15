@@ -1,0 +1,6 @@
+CREATE TABLE store (
+    StoreID INT PRIMARY KEY IDENTITY(1,1),
+    StoreName NVARCHAR(150) NOT NULL,
+    StorePhoneNumber NVARCHAR(20) NOT NULL,
+    StoreManager NVARCHAR(150) NOT NULL
+);
