@@ -1,7 +1,15 @@
-CREATE TABLE borrower (
-    borrowerID INT PRIMARY KEY IDENTITY(1,1),
-    FirstName NVARCHAR(100) NOT NULL,
-    LastName NVARCHAR(100) NOT NULL,
-    Email NVARCHAR(255) NOT NULL,
-    PhoneNumber NVARCHAR(20)
+CREATE TABLE dbo.Borrower (
+    BorrowerID INT IDENTITY(1,1) PRIMARY KEY,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+    LoanNumber VARCHAR(20),
+    State CHAR(2),
+    LoanType VARCHAR(10),            -- Conv, FHA, VA
+    CurrentBalance DECIMAL(12,2),
+    InterestRate DECIMAL(5,3),
+    CurrentPayment DECIMAL(10,2),
+    EscrowPayment DECIMAL(10,2),
+    TotalPayment DECIMAL(10,2),
+    DelinquencyStatus VARCHAR(20),   -- Current, 30 Days, 60 Days, etc.
+    TeamAssigned VARCHAR(50)
 );
